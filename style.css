@@ -1,0 +1,374 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+@import url(https://fonts.googleapis.com/css?family=Rubik:300,regular,500,600,700,800,900,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+
+*{
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+*,*:before,*:after{
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+
+nav,footer,header,aside{display: block;}
+
+html,body{
+	height: 100%;
+	width: 100%;
+	font-size: 100%;
+	line-height: 1;
+	font-size: 14px;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+input,button,textarea{font-family:inherit;}
+
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner {padding:0;border:0;}
+a, a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{list-style: none;}
+img{vertical-align: top;}
+
+h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
+
+/*===========================================================*/
+body{
+    font-family:'Rubik';
+    max-width: 1865px;
+}
+
+.container {
+    max-width: 1680px;
+    margin: auto;
+}
+
+
+.wrapper {
+    min-width: 100%;
+    display: grid;
+    grid-template: minmax(80px, auto) 1fr minmax(70px, auto) / 1fr;
+    grid-template-areas:
+    "header"
+    "main"
+    "footer" ;
+}
+
+
+.header {
+    grid-area: header;
+    padding: 15px;
+    display: grid;
+    align-items: center;
+    grid-template:1fr / 1fr minmax(auto, 830px) minmax(auto, 150px) minmax(auto,300px) minmax(auto,250px) ;
+    position: fixed;
+    opacity: 0.97;
+    background: white;
+    border-bottom: 1px solid rgb(230, 230, 230);
+    
+    
+    
+}
+.header__logo {
+    grid-column: 1/2;
+    transition: all 0.6s ease;
+    
+}
+.header__logo img {
+     width: 195px;
+}
+.header__logo:hover {
+    transition: all 0.6s ease;
+ opacity: 0.5;
+}
+
+.header__list {
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    
+    
+}
+.header__list li::after{
+    content: '|';
+    font-size: 20px;
+    
+    
+}
+
+
+
+.header__list li {
+    transition: all 0.5s ease;
+}
+
+.header__list li:hover {
+    transition: all 0.5s ease;
+    transform: translate(0, -3px); 
+}
+
+
+
+.header__list li a {
+    margin: 0 20px;
+    color: #333333;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: -0.8px;
+    
+}
+
+.header__region {
+    text-align: center;
+}
+.header__region a{
+    
+    color: #333333;
+    font-size: 18px;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: -0.8px;
+    transition: all 0.5s ease;
+}
+.header__region a:hover {
+    transition: all 0.5s ease;
+    color: #7e7e7e;
+}
+
+.header__phone {
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    
+}
+.header__phone a {
+    
+    color: #333333;
+    font-size: 20px;
+    background-image: url(/img/communication_calling_phone_call_icon_259542.svg);
+    background-repeat: no-repeat;
+    background-size: 50px;
+    background-position: 1px ;
+    padding: 30px 0 30px 50px;
+    transition: all 0.5s ease;
+  
+}
+.header__phone  :hover {
+    transition: all 0.5s ease;
+    opacity: 0.5;
+}
+
+
+.header__icons {
+    display: flex;
+    
+ 
+}
+.icons{
+    width: 40px;
+    height: 40px;
+    margin: 15px;
+    transition: all 0.5s ease;
+}
+.icons:hover{
+    transition: all 0.5s ease;
+    transform: translate(0, -3px);
+}
+
+
+.icons {
+}
+/*=====================================================================*/
+
+.main {
+    grid-area: main;
+    margin-top: 90px;
+}
+.main__nav {
+    display: flex;
+    justify-content: center;
+}
+
+.main__nav a {
+    font-size: 16px;
+    color:#b8b5b5 ;
+    text-transform: uppercase;
+    letter-spacing: -0.8px;
+    
+}
+
+.link::after  {
+    content:'-' ;
+}
+
+
+
+.main__title {
+    text-align: center;
+    margin: 25px 0;
+    font-size: 40px;
+    text-transform: uppercase;
+    letter-spacing: -0.8px;
+}
+.main__filter {
+    
+   text-align: right;
+   margin: 60px 20px 50px 0;
+   
+}
+.main__filter a {
+    
+    font-size: 16px;
+    color:#333333 ;
+    
+    letter-spacing: -0.8px;
+}
+
+
+
+
+.main__midle {
+    display: grid;
+    grid-template:1fr / 250px minmax(auto,1430px ) ;
+    gap: 40px;
+}
+.main__sidebar {
+}
+.sidebar__list {
+    text-align: left;
+    position: sticky;
+    top: 170px;
+    
+
+    
+    
+}
+
+.sidebar__list li {
+    padding-bottom: 20px;
+    margin-bottom: 50px;
+    border-bottom: 1px solid #b8b5b5;
+    margin-left: 20px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+.sidebar__list li:hover {
+    transition: all 0.5s ease;
+    border-bottom: 1.5px solid #030303;  
+    
+}
+
+
+
+.sidebar__list li a{
+    font-size: 18px;
+    text-transform: uppercase;
+    color:#333333;
+    
+    
+}
+.main__catalog {
+    
+}
+.catalog__list {
+    display: grid;
+    grid-template:1fr / 325px 325px 325px 325px ;
+    gap: 20px;
+}
+.list-items {
+    
+    
+    padding: 0 15px 15px 15px  ;
+    /* box-shadow: 0px 0px 6px #f0f0f0 ; */
+}
+.list-item__img {
+    
+}
+.list-item__img img{
+    width: 295px;
+    height: 363.77px;
+}
+
+
+
+.list-item__title  {
+    
+    font-size: 18px;
+    margin: 5px 0;
+    
+}
+.list-item__title a  {
+color: #333333;
+}
+
+
+.list-item__comp {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #b8b5b5;
+
+}
+.list-item__price {
+    font-size: 18px;
+}
+
+
+
+
+.footer {
+    grid-area: footer;
+    background: #333333;
+    margin-top: 100px;
+}
+.container {
+}
+.footer__top {
+    display: flex;
+    justify-content: center;
+    
+}
+.footer__lists {
+    margin: 50px 100px;
+    
+}
+.footer__list {
+    
+}
+.footer__list li {
+    font-size: 15px;
+    line-height: 25px;
+    padding: 0 0 20px 0;
+    
+    
+}
+.footer__list a{
+    color: #b8b5b5;
+}
+.head a{
+    font-size: 20px;
+}
+.footer__imput {
+    margin: 50px 200px;
+    
+}
+.imput-title {
+    font-size: 20px;
+    color: aliceblue;
+    padding: 0 0 30px 0 ;
+}
+input {
+    display: block;
+    width: 350px;
+    height: 60px;
+    margin: 0 0 30px 0;
+    background: #333333;
+    border: 1px solid #b8b5b5;
+    color: #b8b5b5;
+    padding: 15px;
+}
